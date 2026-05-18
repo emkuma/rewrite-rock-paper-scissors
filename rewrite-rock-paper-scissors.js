@@ -1,7 +1,7 @@
 let computerScore = 0;
 let yourScore = 0;
 let capturedValue = '';
-s
+
 gameArray = [[["Tie! Pick again."], ['Computer wins!'], ['You win!']],
              [['You win'], ['Tie! Pick again.'], ['Computer wins!']],
              [['Computer wins!'], ['You win'], ['Tie! Pick again.']]];
