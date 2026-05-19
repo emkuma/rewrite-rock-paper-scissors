@@ -20,11 +20,12 @@ function playRound() {
   }
 
   const result = gameArray[humanPickIndex][computerPickIndex][0];
-  console.log(result);
+  // console.log(result);
   
   if (result === "You win!") {
     yourScore++;
-  } else if (result === "Computer wins!") {
+  }
+  else if (result === "Computer wins!") {
     computerScore++;
   } 
   console.log(result);
