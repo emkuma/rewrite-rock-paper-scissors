@@ -32,13 +32,21 @@ function playRound() {
 }
 
 function playGame() {
-  while (computerScore < 5 && yourScore < 5) {
-    playRound();
+  playRound();
+
+  if (yourScore === 5) {
+    console.log("You won the game!");
+    
   }
-  console.log(`Current Score - You: ${yourScore}, Computer: ${computerScore}`);
+  else if (computerScore === 5) {
+    console.log("Computer won the game!");
+  }
+  else {
+    console.log(`Current Score - You: ${yourScore}, Computer: ${computerScore}`);
+  }
 }
 
-playGame();
+
 
 
 
