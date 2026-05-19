@@ -1,37 +1,38 @@
 let computerScore = 0;
 let yourScore = 0;
-let capturedValue = '';
+const choices = ['rock', 'paper', 'scissors'];
 
 gameArray = [[["Tie! Pick again."], ['Computer wins!'], ['You win!']],
              [['You win'], ['Tie! Pick again.'], ['Computer wins!']],
              [['Computer wins!'], ['You win'], ['Tie! Pick again.']]];
 
 
-function captureInput() {
+function playRound() {
   const inputElement = document.getElementById("userInput");
-  const capturedValue = inputElement.value;
-  console.log("User entered:", capturedValue);
-  return;
-}
+  const capturedValue = inputElement.value.toLowerCase();
 
-for (i = 0; i < 5; i++) {
-  const choices = ['rock', 'paper', 'scissors'];
-  const randomNumber = Math.floor(Math.random() * 3);
-  let capturedValue = captureInput();
-  const humanPickIndex = choices.indexOf(capturedValue.toLowerCase());
+  const humanPickIndex = choices.indexOf(capturedValue);
+  const computerPickIndex = Math.floor(Math.random() * 3);
 
-  if (gameArray[humanPickIndex][randomNumber] === 'Computer wins!') {
-    computerScore++;
-    console.log(`Computer wins! Computer: ${computerScore} You: ${yourScore}`);
+  if (humanPickIndex === -1) {
+    console.log("Invalid input. Please choose rock, paper, or scissors.");
+    return;
   }
-  else if (gameArray[humanPickIndex][randomNumber] === 'You win!') {
+
+  const result = gameArray[humanPickIndex][computerPickIndex][0];
+  console.log(result);
+  
+  if (result === "You win!") {
     yourScore++;
-    console.log(`You win! Computer: ${computerScore} You: ${yourScore}`);
-  }
-  else {
-    console.log(`Tie! Pick again.`);
-  }
+  } else if (result === "Computer wins!") {
+    computerScore++;
+  } 
+  console.log(result);
+  console.log(`Your Score: ${yourScore} | Computer Score: ${computerScore}`);
 }
+
+  
+  
 
 
 
