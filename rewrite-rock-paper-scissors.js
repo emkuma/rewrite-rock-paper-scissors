@@ -3,8 +3,8 @@ let yourScore = 0;
 const choices = ['rock', 'paper', 'scissors'];
 
 gameArray = [[["Tie! Pick again."], ['Computer wins!'], ['You win!']],
-             [['You win'], ['Tie! Pick again.'], ['Computer wins!']],
-             [['Computer wins!'], ['You win'], ['Tie! Pick again.']]];
+             [['You win!'], ['Tie! Pick again.'], ['Computer wins!']],
+             [['Computer wins!'], ['You win!'], ['Tie! Pick again.']]];
 
 
 function playRound() {
