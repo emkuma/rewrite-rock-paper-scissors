@@ -20,7 +20,6 @@ function playRound() {
   }
 
   const result = gameArray[humanPickIndex][computerPickIndex][0];
-  // console.log(result);
   
   if (result === "You win!") {
     yourScore++;
@@ -31,6 +30,17 @@ function playRound() {
   console.log(result);
   console.log(`Your Score: ${yourScore} | Computer Score: ${computerScore}`);
 }
+
+function playGame() {
+  while (computerScore < 5 && yourScore < 5) {
+    playRound();
+  }
+  console.log(`Current Score - You: ${yourScore}, Computer: ${computerScore}`);
+}
+
+playGame();
+
+
 
   
   
